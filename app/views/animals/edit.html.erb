@@ -5,8 +5,8 @@
 			h3, h4 { font-size: 122%; }
 			h1, h2, h3, h4 { color: #333; }
 			p { font-size: 100%; line-height: 18px; padding-right: 3em; }
-			
-			
+
+
 			strong { font-weight: bold; }
 			li { line-height: 24px; solid #ccc; }
 			p.enlarge { font-size: 144%; line-height: 24px; }
@@ -27,11 +27,11 @@
 <div class="cadastro col-xs-6 col-md-12">
   <div class="cadastro">
     <h2 style="text-align:center;">Editar cadastro do Animal</h2>
-    
+
     <div class="well col-md-12" style="//margin-top:50px;">
       <h3>Imagens</h3>
       <div class="row">
-        <% @animal.files.each do |picture| %>
+        <% @animal.pictures.each do |picture| %>
         <div class="col-xs-6 col-md-2">
           <a href="<%= url_for(picture) %>" target="_blank" class="thumbnail">
             <img src="<%= url_for(picture.variant(combine_options: { resize: " 145x145", extent: "145x145" ,
@@ -56,7 +56,7 @@
       </div>
       <% end %>
     </div>
-    
+
     <br>
     <div class="col-md-8  col-md-offset-2" style="margin-top:50px;">
       <%= render 'edit_form' %>

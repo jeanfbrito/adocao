@@ -1,7 +1,7 @@
 <!-- Carousel
 ================================================== -->
 <div class="">
- 
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -11,19 +11,19 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <% @animals.each do |animal| %>
-      <% if animal.files.attached? %>
+      <% if animal.pictures.attached? %>
       <div class="item">
-      <img class="second-slide" src="<%= url_for(animal.files.first.variant(combine_options: { resize: "1140x645^", extent: "1140x645", background: "grey", gravity: "center"})) %>" alt="<%= animal.name %>">
+      <img class="second-slide" src="<%= url_for(animal.pictures.first.variant(combine_options: { resize: "1140x645^", extent: "1140x645", background: "grey", gravity: "center"})) %>" alt="<%= animal.name %>">
       <div class="container">
         <div class="carousel-caption">
-          <h1><%= animal.name %></h1>              
+          <h1><%= animal.name %></h1>
           <p><a class="btn btn-lg btn-primary" href="<%= animal_path(animal) %>" role="button">Visualizar</a></p>
         </div>
       </div>
     </div>
-    <% end %> 
-   <% end %> 
- 
+    <% end %>
+   <% end %>
+
   </div>
   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -66,7 +66,7 @@
   </div><!-- /.row -->
 
 
-  
+
 
 <script>
 $(document).on('ready turbolinks:load', function() {
