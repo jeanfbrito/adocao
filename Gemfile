@@ -18,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 gem 'bootstrap-sass', '~> 3.3.7'
-gem 'jquery-rails' 
+gem 'jquery-rails'
 gem 'simple_form'  #gem para formulario
 gem "fotoramajs"
 gem 'devise'      #login
@@ -63,6 +63,8 @@ group :development do
   gem 'mailcatcher'
   gem 'rails-erd', '~> 1.5', '>= 1.5.2'
   gem 'pry', '~> 0.11.3'
+  gem 'faker', '~> 2.10', '>= 2.10.1'
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
 end
 
 group :test do
